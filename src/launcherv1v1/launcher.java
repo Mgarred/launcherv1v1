@@ -27,6 +27,12 @@ public class launcher extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        miniatura1 = new javax.swing.JLabel();
+        miniatura2 = new javax.swing.JLabel();
+        miniatura3 = new javax.swing.JLabel();
+        miniatura4 = new javax.swing.JLabel();
+        miniatura5 = new javax.swing.JLabel();
+        miniatura6 = new javax.swing.JLabel();
         icon1 = new javax.swing.JLabel();
         icon2 = new javax.swing.JLabel();
         icon3 = new javax.swing.JLabel();
@@ -59,17 +65,35 @@ public class launcher extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        miniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton0.png"))); // NOI18N
+        jPanel1.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, -1, -1));
+
+        miniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton1.png"))); // NOI18N
+        jPanel1.add(miniatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 240, 380, 290));
+
+        miniatura3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton2.png"))); // NOI18N
+        jPanel1.add(miniatura3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 240, 380, -1));
+
+        miniatura4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton3.png"))); // NOI18N
+        jPanel1.add(miniatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 700, -1, -1));
+
+        miniatura5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton4.png"))); // NOI18N
+        jPanel1.add(miniatura5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 700, 380, 290));
+
+        miniatura6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton5.png"))); // NOI18N
+        jPanel1.add(miniatura6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 690, 400, 310));
+
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton8.png"))); // NOI18N
         icon1.setMaximumSize(new java.awt.Dimension(102, 111));
         icon1.setMinimumSize(new java.awt.Dimension(102, 111));
         icon1.setPreferredSize(new java.awt.Dimension(102, 111));
-        jPanel1.add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 85, -1, -1));
+        jPanel1.add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, -1, -1));
 
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton0.png"))); // NOI18N
         icon2.setMaximumSize(new java.awt.Dimension(102, 111));
         icon2.setMinimumSize(new java.awt.Dimension(102, 111));
         icon2.setPreferredSize(new java.awt.Dimension(102, 111));
-        jPanel1.add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 85, -1, -1));
+        jPanel1.add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton1.png"))); // NOI18N
         icon3.setMaximumSize(new java.awt.Dimension(102, 111));
@@ -204,5 +228,11 @@ public class launcher extends javax.swing.JFrame {
     private javax.swing.JLabel icon9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel miniatura1;
+    private javax.swing.JLabel miniatura2;
+    private javax.swing.JLabel miniatura3;
+    private javax.swing.JLabel miniatura4;
+    private javax.swing.JLabel miniatura5;
+    private javax.swing.JLabel miniatura6;
     // End of variables declaration//GEN-END:variables
 }
