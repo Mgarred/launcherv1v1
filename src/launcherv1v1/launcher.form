@@ -79,7 +79,7 @@
             <Component class="javax.swing.JLabel" name="icon0">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton8.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton0.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[200, 111]"/>
@@ -95,7 +95,7 @@
             <Component class="javax.swing.JLabel" name="icon1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton0.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton1.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -111,7 +111,7 @@
             <Component class="javax.swing.JLabel" name="icon2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton1.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton2.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -127,7 +127,7 @@
             <Component class="javax.swing.JLabel" name="icon3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton2.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton3.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -143,7 +143,7 @@
             <Component class="javax.swing.JLabel" name="icon4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton3.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton4.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -159,27 +159,11 @@
             <Component class="javax.swing.JLabel" name="icon5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton4.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton5.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="icon6">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton5.png"/>
-                </Property>
-                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[102, 111]"/>
-                </Property>
-                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[102, 111]"/>
-                </Property>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[102, 111]"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="icon7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/escudos/LauncherButton6.png"/>
@@ -195,7 +179,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="icon8">
+            <Component class="javax.swing.JLabel" name="icon7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/escudos/LauncherButton7.png"/>
@@ -211,10 +195,10 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="icon9">
+            <Component class="javax.swing.JLabel" name="icon8">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton13.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton8.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -227,7 +211,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="icon10">
+            <Component class="javax.swing.JLabel" name="icon9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/escudos/LauncherButton9.png"/>
@@ -243,17 +227,33 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="icon11">
+            <Component class="javax.swing.JLabel" name="icon10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/escudos/LauncherButton10.png"/>
+                </Property>
+                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[102, 111]"/>
+                </Property>
+                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[102, 111]"/>
+                </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[102, 111]"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="icon11">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/escudos/LauncherButton11.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="icon12">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton11.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton12.png"/>
                 </Property>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[102, 111]"/>
@@ -269,7 +269,7 @@
             <Component class="javax.swing.JLabel" name="icon13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/escudos/LauncherButton12.png"/>
+                  <Image iconType="3" name="/escudos/LauncherButton13.png"/>
                 </Property>
                 <Property name="alignmentY" type="float" value="0.0"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>

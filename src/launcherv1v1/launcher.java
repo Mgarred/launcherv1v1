@@ -23,19 +23,19 @@ public class launcher extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
 
         SetImageLabel(icon0, "src/escudos/LauncherButton0.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton1.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton2.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton3.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton4.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton5.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton6.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton7.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton8.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton9.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton10.png");
-        SetImageLabel(icon0, "src/escudos/LauncherButton11.png");
-         SetImageLabel(icon0,"src/escudos/LauncherButton12.png");
-          SetImageLabel(icon0,"src/escudos/LauncherButton13.png");
+        SetImageLabel(icon1, "src/escudos/LauncherButton1.png");
+        SetImageLabel(icon2, "src/escudos/LauncherButton2.png");
+        SetImageLabel(icon3, "src/escudos/LauncherButton3.png");
+        SetImageLabel(icon4, "src/escudos/LauncherButton4.png");
+        SetImageLabel(icon5, "src/escudos/LauncherButton5.png");
+        SetImageLabel(icon6, "src/escudos/LauncherButton6.png");
+        SetImageLabel(icon7, "src/escudos/LauncherButton7.png");
+        SetImageLabel(icon8, "src/escudos/LauncherButton8.png");
+        SetImageLabel(icon9, "src/escudos/LauncherButton9.png");
+        SetImageLabel(icon10, "src/escudos/LauncherButton10.png");
+        SetImageLabel(icon11, "src/escudos/LauncherButton11.png");
+        SetImageLabel(icon12, "src/escudos/LauncherButton12.png");
+        SetImageLabel(icon13, "src/escudos/LauncherButton13.png");
 
     }
 
@@ -90,79 +90,79 @@ public class launcher extends javax.swing.JFrame {
 
         jPanel3.setOpaque(false);
 
-        icon0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton8.png"))); // NOI18N
+        icon0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton0.png"))); // NOI18N
         icon0.setMaximumSize(new java.awt.Dimension(200, 111));
         icon0.setMinimumSize(new java.awt.Dimension(102, 111));
         icon0.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon0);
 
-        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton0.png"))); // NOI18N
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton1.png"))); // NOI18N
         icon1.setMaximumSize(new java.awt.Dimension(102, 111));
         icon1.setMinimumSize(new java.awt.Dimension(102, 111));
         icon1.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon1);
 
-        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton1.png"))); // NOI18N
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton2.png"))); // NOI18N
         icon2.setMaximumSize(new java.awt.Dimension(102, 111));
         icon2.setMinimumSize(new java.awt.Dimension(102, 111));
         icon2.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon2);
 
-        icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton2.png"))); // NOI18N
+        icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton3.png"))); // NOI18N
         icon3.setMaximumSize(new java.awt.Dimension(102, 111));
         icon3.setMinimumSize(new java.awt.Dimension(102, 111));
         icon3.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon3);
 
-        icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton3.png"))); // NOI18N
+        icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton4.png"))); // NOI18N
         icon4.setMaximumSize(new java.awt.Dimension(102, 111));
         icon4.setMinimumSize(new java.awt.Dimension(102, 111));
         icon4.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon4);
 
-        icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton4.png"))); // NOI18N
+        icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton5.png"))); // NOI18N
         jPanel3.add(icon5);
 
-        icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton5.png"))); // NOI18N
+        icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton6.png"))); // NOI18N
         icon6.setMaximumSize(new java.awt.Dimension(102, 111));
         icon6.setMinimumSize(new java.awt.Dimension(102, 111));
         icon6.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon6);
 
-        icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton6.png"))); // NOI18N
+        icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton7.png"))); // NOI18N
         icon7.setMaximumSize(new java.awt.Dimension(102, 111));
         icon7.setMinimumSize(new java.awt.Dimension(102, 111));
         icon7.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon7);
 
-        icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton7.png"))); // NOI18N
+        icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton8.png"))); // NOI18N
         icon8.setMaximumSize(new java.awt.Dimension(102, 111));
         icon8.setMinimumSize(new java.awt.Dimension(102, 111));
         icon8.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon8);
 
-        icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton13.png"))); // NOI18N
+        icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton9.png"))); // NOI18N
         icon9.setMaximumSize(new java.awt.Dimension(102, 111));
         icon9.setMinimumSize(new java.awt.Dimension(102, 111));
         icon9.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon9);
 
-        icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton9.png"))); // NOI18N
+        icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton10.png"))); // NOI18N
         icon10.setMaximumSize(new java.awt.Dimension(102, 111));
         icon10.setMinimumSize(new java.awt.Dimension(102, 111));
         icon10.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon10);
 
-        icon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton10.png"))); // NOI18N
+        icon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton11.png"))); // NOI18N
         jPanel3.add(icon11);
 
-        icon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton11.png"))); // NOI18N
+        icon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton12.png"))); // NOI18N
         icon12.setMaximumSize(new java.awt.Dimension(102, 111));
         icon12.setMinimumSize(new java.awt.Dimension(102, 111));
         icon12.setPreferredSize(new java.awt.Dimension(102, 111));
         jPanel3.add(icon12);
 
-        icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton12.png"))); // NOI18N
+        icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton13.png"))); // NOI18N
         icon13.setAlignmentY(0.0F);
         icon13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel3.add(icon13);
