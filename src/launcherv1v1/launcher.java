@@ -71,7 +71,6 @@ public class launcher extends javax.swing.JFrame {
         miniatura3 = new javax.swing.JLabel();
         miniatura5 = new javax.swing.JLabel();
         miniatura4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         contentbackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -190,14 +189,14 @@ public class launcher extends javax.swing.JFrame {
 
         miniatura0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton0.png"))); // NOI18N
-        jPanel2.add(miniatura0, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 51, 400, 290));
+        jPanel2.add(miniatura0, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 410, 300));
 
         miniatura1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton1.png"))); // NOI18N
         miniatura1.setMaximumSize(new java.awt.Dimension(381, 291));
         miniatura1.setMinimumSize(new java.awt.Dimension(381, 291));
         miniatura1.setPreferredSize(new java.awt.Dimension(381, 291));
-        jPanel2.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 440, 320));
+        jPanel2.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 460, 390));
 
         miniatura2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton2.png"))); // NOI18N
@@ -220,9 +219,6 @@ public class launcher extends javax.swing.JFrame {
         miniatura4.setMinimumSize(new java.awt.Dimension(381, 291));
         miniatura4.setPreferredSize(new java.awt.Dimension(381, 291));
         jPanel2.add(miniatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 440, 320));
-
-        jLabel1.setText("jLabel1");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 40, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 203, -1, -1));
 
@@ -272,10 +268,9 @@ public class launcher extends javax.swing.JFrame {
     }
 
     private void SetImageLabel(JLabel labelName, String root) {
-        ImageIcon image = new ImageIcon(root);
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
-        labelName.setIcon(icon);
-        this.repaint();
+         ImageIcon icon = new ImageIcon(root);
+    labelName.setIcon(icon);
+    this.repaint();
 
     }
 
@@ -310,7 +305,6 @@ public class launcher extends javax.swing.JFrame {
     private javax.swing.JLabel icon7;
     private javax.swing.JLabel icon8;
     private javax.swing.JLabel icon9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
