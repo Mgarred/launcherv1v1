@@ -29,7 +29,13 @@ public class launcher extends javax.swing.JFrame {
             SetImageLabel(iconolabels[i], "src/escudos/LauncherButton" + i + ".png");
             addMouseListeners(iconolabels[i]);
         }
-        
+        this.setLocationRelativeTo(null);
+
+        JLabel[] minilabels = {miniatura0,miniatura1,miniatura2,miniatura3,miniatura4,miniatura5};
+        for (int i = 0; i < minilabels.length; i++) {
+            SetImageLabel(minilabels[i], "src/miniaturas/HomeButton" + i + ".png");
+            addMouseListeners(minilabels[i]);
+        }
 
     }
 
@@ -182,23 +188,38 @@ public class launcher extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1552, 870));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        miniatura0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton0.png"))); // NOI18N
-        jPanel2.add(miniatura0, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
+        jPanel2.add(miniatura0, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 51, 400, 290));
 
+        miniatura1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton1.png"))); // NOI18N
-        jPanel2.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 380, 290));
+        miniatura1.setMaximumSize(new java.awt.Dimension(381, 291));
+        miniatura1.setMinimumSize(new java.awt.Dimension(381, 291));
+        miniatura1.setPreferredSize(new java.awt.Dimension(381, 291));
+        jPanel2.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 440, 320));
 
+        miniatura2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton2.png"))); // NOI18N
-        jPanel2.add(miniatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 80, 380, -1));
+        jPanel2.add(miniatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 41, 440, 320));
 
+        miniatura3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton3.png"))); // NOI18N
-        jPanel2.add(miniatura3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 530, -1, -1));
+        miniatura3.setMaximumSize(new java.awt.Dimension(381, 291));
+        miniatura3.setMinimumSize(new java.awt.Dimension(381, 291));
+        miniatura3.setPreferredSize(new java.awt.Dimension(381, 291));
+        jPanel2.add(miniatura3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 491, 440, 320));
 
+        miniatura5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton5.png"))); // NOI18N
-        jPanel2.add(miniatura5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 520, 400, 310));
+        jPanel2.add(miniatura5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 480, 460, 340));
 
+        miniatura4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         miniatura4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton4.png"))); // NOI18N
-        jPanel2.add(miniatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, 380, 290));
+        miniatura4.setMaximumSize(new java.awt.Dimension(381, 291));
+        miniatura4.setMinimumSize(new java.awt.Dimension(381, 291));
+        miniatura4.setPreferredSize(new java.awt.Dimension(381, 291));
+        jPanel2.add(miniatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 440, 320));
 
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 40, -1, -1));
