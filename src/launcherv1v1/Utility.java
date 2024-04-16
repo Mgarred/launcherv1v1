@@ -4,32 +4,36 @@
  */
 package launcherv1v1;
 
-import java.awt.*;
 import javax.swing.*;
-import java.util.*;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
-/**
- aqui creamos las utilidades
- */
 public class Utility {
-    
+    // Almacenar las imágenes originales para cada JLabel
+    private static final Map<JLabel, ImageIcon> originalIcons = new HashMap<>();
 
-    public static void resizeImage(JLabel label, int width, int height) {
+    // Método para aumentar el tamaño de la imagen
+    public static void zoomImage(JLabel label, double scale) {
         ImageIcon icon = (ImageIcon) label.getIcon();
         if (icon != null) {
+            // Guardar el icono original si aún no está guardado
+            originalIcons.putIfAbsent(label, icon);
+
+            int newWidth = (int) (icon.getIconWidth() * scale);
+            int newHeight = (int) (icon.getIconHeight() * scale);
             Image img = icon.getImage();
-            Image resizedImage = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+            Image resizedImage = img.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
             label.setIcon(new ImageIcon(resizedImage));
         }
     }
     
+    // Método para restablecer el tamaño original de la imagen
     public static void resetImageSize(JLabel label) {
-        ImageIcon icon = (ImageIcon) label.getIcon();
-        if (icon != null) {
-            Image img = icon.getImage();            
-            Image resizedImage = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
-            label.setIcon(new ImageIcon(resizedImage));
+        ImageIcon originalIcon = originalIcons.get(label);
+        if (originalIcon != null) {
+            label.setIcon(originalIcon);
         }
     }
-   
 }
+

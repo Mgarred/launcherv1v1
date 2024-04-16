@@ -4,23 +4,21 @@
  */
 package launcherv1v1;
 
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
  * @author mgarr
  */
-public class launcher extends javax.swing.JFrame {
+public class game extends javax.swing.JFrame {
 
     /**
-     * Creates new form launcher
+     * Creates new form game
      */
-    public launcher() {
+    public game() {
         initComponents();
         this.setLocationRelativeTo(null);
 
@@ -29,14 +27,6 @@ public class launcher extends javax.swing.JFrame {
             SetImageLabel(iconolabels[i], "src/escudos/LauncherButton" + i + ".png");
             addMouseListeners(iconolabels[i]);
         }
-        this.setLocationRelativeTo(null);
-
-        JLabel[] minilabels = {miniatura0,miniatura1,miniatura2,miniatura3,miniatura4,miniatura5};
-        for (int i = 0; i < minilabels.length; i++) {
-            SetImageLabel(minilabels[i], "src/miniaturas/HomeButton" + i + ".png");
-            addMouseListeners(minilabels[i]);
-        }
-
     }
 
     /**
@@ -64,24 +54,9 @@ public class launcher extends javax.swing.JFrame {
         icon11 = new javax.swing.JLabel();
         icon12 = new javax.swing.JLabel();
         icon13 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        miniatura0 = new javax.swing.JLabel();
-        miniatura1 = new javax.swing.JLabel();
-        miniatura2 = new javax.swing.JLabel();
-        miniatura3 = new javax.swing.JLabel();
-        miniatura5 = new javax.swing.JLabel();
-        miniatura4 = new javax.swing.JLabel();
-        contentbackground = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
-        setMinimumSize(new java.awt.Dimension(1920, 1080));
-        setUndecorated(true);
-        setResizable(false);
-        setSize(new java.awt.Dimension(1920, 1080));
-        setType(java.awt.Window.Type.UTILITY);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setMinimumSize(new java.awt.Dimension(1920, 1080));
@@ -91,6 +66,7 @@ public class launcher extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        icon0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton0.png"))); // NOI18N
         icon0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon0.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -98,6 +74,7 @@ public class launcher extends javax.swing.JFrame {
         icon0.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
+        icon1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton1.png"))); // NOI18N
         icon1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon1.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -105,6 +82,7 @@ public class launcher extends javax.swing.JFrame {
         icon1.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
+        icon2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton2.png"))); // NOI18N
         icon2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon2.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -112,6 +90,7 @@ public class launcher extends javax.swing.JFrame {
         icon2.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
+        icon3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton3.png"))); // NOI18N
         icon3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon3.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -119,6 +98,7 @@ public class launcher extends javax.swing.JFrame {
         icon3.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
+        icon4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton4.png"))); // NOI18N
         icon4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon4.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -134,6 +114,7 @@ public class launcher extends javax.swing.JFrame {
         icon5.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
 
+        icon6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton6.png"))); // NOI18N
         icon6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon6.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -141,6 +122,7 @@ public class launcher extends javax.swing.JFrame {
         icon6.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
 
+        icon7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton7.png"))); // NOI18N
         icon7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon7.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -148,6 +130,7 @@ public class launcher extends javax.swing.JFrame {
         icon7.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, -1, -1));
 
+        icon9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton9.png"))); // NOI18N
         icon9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon9.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -155,6 +138,7 @@ public class launcher extends javax.swing.JFrame {
         icon9.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, -1, -1));
 
+        icon8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton8.png"))); // NOI18N
         icon8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon8.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -162,6 +146,7 @@ public class launcher extends javax.swing.JFrame {
         icon8.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
 
+        icon10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton10.png"))); // NOI18N
         icon10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon10.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -169,6 +154,7 @@ public class launcher extends javax.swing.JFrame {
         icon10.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 20, -1, -1));
 
+        icon11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton11.png"))); // NOI18N
         icon11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon11.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -176,6 +162,7 @@ public class launcher extends javax.swing.JFrame {
         icon11.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 20, -1, -1));
 
+        icon12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton12.png"))); // NOI18N
         icon12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon12.setMaximumSize(new java.awt.Dimension(90, 90));
@@ -183,6 +170,7 @@ public class launcher extends javax.swing.JFrame {
         icon12.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
 
+        icon13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton13.png"))); // NOI18N
         icon13.setAlignmentY(0.0F);
         icon13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -191,55 +179,29 @@ public class launcher extends javax.swing.JFrame {
         icon13.setPreferredSize(new java.awt.Dimension(120, 120));
         jPanel3.add(icon13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 20, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 1540, 130));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 1540, 130));
 
-        jPanel2.setMaximumSize(new java.awt.Dimension(1552, 870));
-        jPanel2.setMinimumSize(new java.awt.Dimension(1552, 870));
-        jPanel2.setOpaque(false);
-        jPanel2.setPreferredSize(new java.awt.Dimension(1552, 870));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launcherv1v1/FondoBase.png"))); // NOI18N
+        jLabel1.setToolTipText("");
+        jLabel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        jLabel1.setMinimumSize(new java.awt.Dimension(1920, 1080));
+        jLabel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -4, -1, -1));
 
-        miniatura0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton0.png"))); // NOI18N
-        jPanel2.add(miniatura0, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 490, 360));
-
-        miniatura1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton1.png"))); // NOI18N
-        miniatura1.setMaximumSize(new java.awt.Dimension(381, 291));
-        miniatura1.setMinimumSize(new java.awt.Dimension(381, 291));
-        miniatura1.setPreferredSize(new java.awt.Dimension(381, 291));
-        jPanel2.add(miniatura1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, 520, 400));
-
-        miniatura2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton2.png"))); // NOI18N
-        jPanel2.add(miniatura2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 40, 490, 380));
-
-        miniatura3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton3.png"))); // NOI18N
-        miniatura3.setMaximumSize(new java.awt.Dimension(381, 291));
-        miniatura3.setMinimumSize(new java.awt.Dimension(381, 291));
-        miniatura3.setPreferredSize(new java.awt.Dimension(381, 291));
-        jPanel2.add(miniatura3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 490, 370));
-
-        miniatura5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton5.png"))); // NOI18N
-        jPanel2.add(miniatura5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 480, 540, 370));
-
-        miniatura4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        miniatura4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miniaturas/HomeButton4.png"))); // NOI18N
-        miniatura4.setMaximumSize(new java.awt.Dimension(381, 291));
-        miniatura4.setMinimumSize(new java.awt.Dimension(381, 291));
-        miniatura4.setPreferredSize(new java.awt.Dimension(381, 291));
-        jPanel2.add(miniatura4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 500, 420));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 203, -1, -1));
-
-        contentbackground.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        contentbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launcherv1v1/FondoBase.png"))); // NOI18N
-        contentbackground.setFocusTraversalPolicyProvider(true);
-        jPanel1.add(contentbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -261,25 +223,24 @@ public class launcher extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(launcher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(launcher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(launcher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(launcher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new launcher().setVisible(true);
+                new game().setVisible(true);
             }
         });
     }
-
-    private void SetImageLabel(JLabel label, String path) {
+     private void SetImageLabel(JLabel label, String path) {
     ImageIcon icon = new ImageIcon(path);
     label.setIcon(icon); // Establece el icono sin cambiar el tamaño.
     this.repaint();      // Asegura que el componente se actualice en la pantalla.
@@ -300,9 +261,7 @@ public class launcher extends javax.swing.JFrame {
         });
     }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel contentbackground;
     private javax.swing.JLabel icon0;
     private javax.swing.JLabel icon1;
     private javax.swing.JLabel icon10;
@@ -317,14 +276,8 @@ public class launcher extends javax.swing.JFrame {
     private javax.swing.JLabel icon7;
     private javax.swing.JLabel icon8;
     private javax.swing.JLabel icon9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel miniatura0;
-    private javax.swing.JLabel miniatura1;
-    private javax.swing.JLabel miniatura2;
-    private javax.swing.JLabel miniatura3;
-    private javax.swing.JLabel miniatura4;
-    private javax.swing.JLabel miniatura5;
     // End of variables declaration//GEN-END:variables
 }
