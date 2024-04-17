@@ -10,12 +10,16 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JFrame;
 
 /**
  *
  * @author mgarr
  */
 public class launcher extends javax.swing.JFrame {
+ private JFrame imageFrame = new JFrame("Image Display");
 
     /**
      * Creates new form launcher
@@ -23,6 +27,7 @@ public class launcher extends javax.swing.JFrame {
     public launcher() {
         initComponents();
         this.setLocationRelativeTo(null);
+       
 
         JLabel[] iconolabels = {icon0, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13};
         for (int i = 0; i < iconolabels.length; i++) {
@@ -31,7 +36,7 @@ public class launcher extends javax.swing.JFrame {
         }
         this.setLocationRelativeTo(null);
 
-        JLabel[] minilabels = {miniatura0,miniatura1,miniatura2,miniatura3,miniatura4,miniatura5};
+        JLabel[] minilabels = {miniatura0, miniatura1, miniatura2, miniatura3, miniatura4, miniatura5};
         for (int i = 0; i < minilabels.length; i++) {
             SetImageLabel(minilabels[i], "src/miniaturas/HomeButton" + i + ".png");
             addMouseListeners(minilabels[i]);
@@ -279,25 +284,36 @@ public class launcher extends javax.swing.JFrame {
         });
     }
 
-    private void SetImageLabel(JLabel label, String path) {
-    ImageIcon icon = new ImageIcon(path);
-    label.setIcon(icon); // Establece el icono sin cambiar el tamaño.
-    this.repaint();      // Asegura que el componente se actualice en la pantalla.
-}
+    
+    // Repetir para todas las miniaturas}
 
+    private void SetImageLabel(JLabel label, String path) {
+        ImageIcon icon = new ImageIcon(path);
+        label.setIcon(icon); // Establece el icono sin cambiar el tamaño.
+        this.repaint();      // Asegura que el componente se actualice en la pantalla.
+    }
 
     private void addMouseListeners(JLabel label) {
         label.addMouseListener(new MouseAdapter() {
-            @Override
-       public void mouseEntered(MouseEvent e) {
-            // Aumentar el tamaño de la imagen en un 20%
-            Utility.zoomImage(label, 1.2); // Asumiendo que 1.2 es un 20% más grande
-        }
+            
+            
+            @Override       
+            public void mouseEntered(MouseEvent e) {
+                // Aumentar el tamaño de la imagen en un 20%
+                Utility.zoomImage(label, 1.2); // Asumiendo que 1.2 es un 20% más grande
+            }
+
             @Override
             public void mouseExited(MouseEvent e) {
                 Utility.resetImageSize(label);
             }
+            @Override
+            public void mouseClicked (MouseEvent e){
+                JFrame currentFrame = null;
+                Utility.openGameWindow(currentFrame);
+            }
         });
+
     }
 
 
@@ -327,4 +343,7 @@ public class launcher extends javax.swing.JFrame {
     private javax.swing.JLabel miniatura4;
     private javax.swing.JLabel miniatura5;
     // End of variables declaration//GEN-END:variables
-}
+
+    
+    }
+
