@@ -6,8 +6,6 @@ package launcherv1v1;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.HashMap;
-import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -15,13 +13,15 @@ import javax.swing.JLabel;
  *
  * @author mgarr
  */
-
 public class game extends javax.swing.JFrame {
-    
-        
-    String[] imagePaths;
-    int ImageIndex;
-   
+
+    public String[] Embarque = new String[5];
+    public String[] Hemorragia = new String[5];
+    public String[] Extincion = new String[5];
+    public String[] Epis = new String[5];
+    public String[] Helicoptero = new String[5];
+    public String[] Ascensor = new String[5];
+    private int currentImageIndex = 0;
 
     /**
      * Creates new form game
@@ -29,35 +29,100 @@ public class game extends javax.swing.JFrame {
     public game() {
         initComponents();
         this.setLocationRelativeTo(null);
-         imagePaths = new String[]{
-            "src/InterfazGame/Miniaturas/Embarque/Embarque0.png",
-            "src/InterfazGame/Miniaturas/Embarque/Embarque1.png",
-            "src/InterfazGame/Miniaturas/Embarque/Embarque2.png",
-            "src/InterfazGame/Miniaturas/Embarque/Embarque3.png",
-            "src/InterfazGame/Miniaturas/Embarque/Embarque4.png"
-        };
+        for (int i = 0; i < 5; i++) {
+            Embarque[i] = "src/InterfazGame/Miniaturas/Embarque/Embarque" + i + ".png";
 
-        ImageIndex=0;
-        printfoto();
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Embarque[currentImageIndex]);
+        for (int i = 0; i < 5; i++) {
+            Hemorragia[i] = "src/InterfazGame/Miniaturas/Hemorragia/Hemorragia" + i + ".png";
 
-       
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Hemorragia[currentImageIndex]);
+        for (int i = 0; i < 5; i++) {
+            Extincion[i] = "src/InterfazGame/Miniaturas/Extincion/Extincion" + i + ".png";
+
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Extincion[currentImageIndex]);
+
+        for (int i = 0; i < 5; i++) {
+            Epis[i] = "src/InterfazGame/Miniaturas/EPIS/EPIS" + i + ".png";
+
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Epis[currentImageIndex]);
+        for (int i = 0; i < 5; i++) {
+            Helicoptero[i] = "src/InterfazGame/Miniaturas/Helicoptero/Helicoptero" + i + ".png";
+
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Helicoptero[currentImageIndex]);
+        for (int i = 0; i < 5; i++) {
+            Ascensor[i] = "src/InterfazGame/Miniaturas/Ascensor/Ascensor" + i + ".png";
+
+        }
+        currentImageIndex = 0;
+        SetImageLabel(labelimagenes, Ascensor[currentImageIndex]);
         
+        
+
         JLabel[] iconolabels = {icon0, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, icon11, icon12, icon13};
         for (int i = 0; i < iconolabels.length; i++) {
             SetImageLabel(iconolabels[i], "src/escudos/LauncherButton" + i + ".png");
             addMouseListeners(iconolabels[i]);
         }
-       
-        
+
     }
 
-    public void printfoto(){
-       SetImageLabel ( carrusellabel,imagePaths[ImageIndex] );
-}
+    private void previousImage() {
+        if (currentImageIndex == 0) {
+            currentImageIndex = Embarque.length - 1;
 
-    
-     
-    
+        } else {
+            currentImageIndex--;
+        }
+
+    }
+
+    private void nextImage() {
+        if (currentImageIndex == Embarque.length - 1) {
+            currentImageIndex = 0;
+
+        } else {
+            currentImageIndex++;
+        }
+    }
+
+    private void updateDots() {
+        // Establecer todos los puntos como vacíos
+        puntolleno0.setVisible(false);
+        puntolleno1.setVisible(false);
+        puntolleno2.setVisible(false);
+        puntolleno3.setVisible(false);
+        puntolleno4.setVisible(false);
+
+        // Mostrar como lleno solo el punto correspondiente a la imagen actual
+        switch (currentImageIndex) {
+            case 0:
+                puntolleno0.setVisible(true);
+                break;
+            case 1:
+                puntolleno1.setVisible(true);
+                break;
+            case 2:
+                puntolleno2.setVisible(true);
+                break;
+            case 3:
+                puntolleno3.setVisible(true);
+                break;
+            case 4:
+                puntolleno4.setVisible(true);
+                break;
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -69,21 +134,10 @@ public class game extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        carrusellabel = new javax.swing.JLabel();
-        comenzar = new javax.swing.JLabel();
-        flechaizq = new javax.swing.JLabel();
-        flechader = new javax.swing.JLabel();
-        fondocarru = new javax.swing.JLabel();
-        punto1carru = new javax.swing.JLabel();
-        punto2carru = new javax.swing.JLabel();
-        punto3carru = new javax.swing.JLabel();
-        punto4carru = new javax.swing.JLabel();
-        punto5carru = new javax.swing.JLabel();
-        paneliconos = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         icon0 = new javax.swing.JLabel();
         icon1 = new javax.swing.JLabel();
         icon2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         icon3 = new javax.swing.JLabel();
         icon4 = new javax.swing.JLabel();
         icon5 = new javax.swing.JLabel();
@@ -95,106 +149,70 @@ public class game extends javax.swing.JFrame {
         icon11 = new javax.swing.JLabel();
         icon12 = new javax.swing.JLabel();
         icon13 = new javax.swing.JLabel();
+        puntolleno0 = new javax.swing.JLabel();
+        puntolleno1 = new javax.swing.JLabel();
+        puntolleno2 = new javax.swing.JLabel();
+        puntolleno3 = new javax.swing.JLabel();
+        puntolleno4 = new javax.swing.JLabel();
+        puntovacio0 = new javax.swing.JLabel();
+        puntovacio1 = new javax.swing.JLabel();
+        puntovacio2 = new javax.swing.JLabel();
+        puntovacio3 = new javax.swing.JLabel();
+        puntovacio4 = new javax.swing.JLabel();
+        felchaizq = new javax.swing.JLabel();
+        flechader = new javax.swing.JLabel();
+        labelimagenes = new javax.swing.JLabel();
+        fondocar = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
-        panecarrusel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1920, 1080));
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setMinimumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(carrusellabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 230, 640, 470));
 
-        comenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Comenzar.png"))); // NOI18N
-        jPanel1.add(comenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1630, 980, 250, 50));
+        jPanel3.setOpaque(false);
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        flechaizq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Flecha izquierda.png"))); // NOI18N
-        flechaizq.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                flechaizqMouseClicked(evt);
-            }
-        });
-        jPanel1.add(flechaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, -1, -1));
-
-        flechader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Flecha derecha.png"))); // NOI18N
-        flechader.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                flechaderMouseClicked(evt);
-            }
-        });
-        jPanel1.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 450, -1, -1));
-
-        fondocarru.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fondocarru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Cuadrado fondo enfocado.png"))); // NOI18N
-        fondocarru.setMaximumSize(new java.awt.Dimension(1070, 470));
-        fondocarru.setMinimumSize(new java.awt.Dimension(1070, 470));
-        fondocarru.setPreferredSize(new java.awt.Dimension(1070, 470));
-        jPanel1.add(fondocarru, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 220, 1070, 470));
-
-        punto1carru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
-        jPanel1.add(punto1carru, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 740, -1, -1));
-
-        punto2carru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
-        jPanel1.add(punto2carru, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 740, -1, -1));
-
-        punto3carru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
-        jPanel1.add(punto3carru, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 740, -1, -1));
-
-        punto4carru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
-        jPanel1.add(punto4carru, new org.netbeans.lib.awtextra.AbsoluteConstraints(1340, 740, -1, -1));
-
-        punto5carru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
-        jPanel1.add(punto5carru, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 740, -1, -1));
-
-        paneliconos.setOpaque(false);
-        paneliconos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        icon0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton0.png"))); // NOI18N
         icon0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon0.setMaximumSize(new java.awt.Dimension(90, 90));
         icon0.setMinimumSize(new java.awt.Dimension(90, 90));
         icon0.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel3.add(icon0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        icon1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton1.png"))); // NOI18N
         icon1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon1.setMaximumSize(new java.awt.Dimension(90, 90));
         icon1.setMinimumSize(new java.awt.Dimension(90, 90));
         icon1.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
+        jPanel3.add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
-        icon2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton2.png"))); // NOI18N
         icon2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon2.setMaximumSize(new java.awt.Dimension(90, 90));
         icon2.setMinimumSize(new java.awt.Dimension(90, 90));
         icon2.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
+        jPanel3.add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Cuadrado fondo enfocado.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        paneliconos.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 800, 440));
-
-        icon3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton3.png"))); // NOI18N
         icon3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon3.setMaximumSize(new java.awt.Dimension(90, 90));
         icon3.setMinimumSize(new java.awt.Dimension(90, 90));
         icon3.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
+        jPanel3.add(icon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
-        icon4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton4.png"))); // NOI18N
         icon4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon4.setMaximumSize(new java.awt.Dimension(90, 90));
         icon4.setMinimumSize(new java.awt.Dimension(90, 90));
         icon4.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, -1, -1));
+        jPanel3.add(icon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, -1, -1));
 
         icon5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton5.png"))); // NOI18N
@@ -202,194 +220,201 @@ public class game extends javax.swing.JFrame {
         icon5.setMaximumSize(new java.awt.Dimension(90, 90));
         icon5.setMinimumSize(new java.awt.Dimension(90, 90));
         icon5.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
+        jPanel3.add(icon5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
 
-        icon6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton6.png"))); // NOI18N
         icon6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon6.setMaximumSize(new java.awt.Dimension(90, 90));
         icon6.setMinimumSize(new java.awt.Dimension(90, 90));
         icon6.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
+        jPanel3.add(icon6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, -1));
 
-        icon7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton7.png"))); // NOI18N
         icon7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon7.setMaximumSize(new java.awt.Dimension(90, 90));
         icon7.setMinimumSize(new java.awt.Dimension(90, 90));
         icon7.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, -1, -1));
+        jPanel3.add(icon7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, -1, -1));
 
-        icon9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton9.png"))); // NOI18N
         icon9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon9.setMaximumSize(new java.awt.Dimension(90, 90));
         icon9.setMinimumSize(new java.awt.Dimension(90, 90));
         icon9.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, -1, -1));
+        jPanel3.add(icon9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, -1, -1));
 
-        icon8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton8.png"))); // NOI18N
         icon8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon8.setMaximumSize(new java.awt.Dimension(90, 90));
         icon8.setMinimumSize(new java.awt.Dimension(90, 90));
         icon8.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
+        jPanel3.add(icon8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 20, -1, -1));
 
-        icon10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton10.png"))); // NOI18N
         icon10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon10.setMaximumSize(new java.awt.Dimension(90, 90));
         icon10.setMinimumSize(new java.awt.Dimension(90, 90));
         icon10.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 20, -1, -1));
+        jPanel3.add(icon10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 20, -1, -1));
 
-        icon11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton11.png"))); // NOI18N
         icon11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon11.setMaximumSize(new java.awt.Dimension(90, 90));
         icon11.setMinimumSize(new java.awt.Dimension(90, 90));
         icon11.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 20, -1, -1));
+        jPanel3.add(icon11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 20, -1, -1));
 
-        icon12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton12.png"))); // NOI18N
         icon12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon12.setMaximumSize(new java.awt.Dimension(90, 90));
         icon12.setMinimumSize(new java.awt.Dimension(90, 90));
         icon12.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
+        jPanel3.add(icon12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
 
-        icon13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/escudos/LauncherButton13.png"))); // NOI18N
         icon13.setAlignmentY(0.0F);
         icon13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         icon13.setMaximumSize(new java.awt.Dimension(90, 90));
         icon13.setMinimumSize(new java.awt.Dimension(90, 90));
         icon13.setPreferredSize(new java.awt.Dimension(120, 120));
-        paneliconos.add(icon13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 20, -1, -1));
+        jPanel3.add(icon13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 20, -1, -1));
 
-        jPanel1.add(paneliconos, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 1540, 130));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 1500, 120));
+
+        puntolleno0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
+        jPanel1.add(puntolleno0, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 810, -1, -1));
+
+        puntolleno1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
+        jPanel1.add(puntolleno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 810, 20, 20));
+
+        puntolleno2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
+        jPanel1.add(puntolleno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 810, -1, -1));
+
+        puntolleno3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
+        jPanel1.add(puntolleno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 810, -1, -1));
+
+        puntolleno4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselFilled.png"))); // NOI18N
+        jPanel1.add(puntolleno4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 810, -1, -1));
+
+        puntovacio0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+        jPanel1.add(puntovacio0, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 810, 20, -1));
+
+        puntovacio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+        jPanel1.add(puntovacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 810, 20, -1));
+
+        puntovacio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+        jPanel1.add(puntovacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 810, 20, -1));
+
+        puntovacio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+        jPanel1.add(puntovacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 810, 20, -1));
+
+        puntovacio4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/PuntoCarruselEmpty.png"))); // NOI18N
+        jPanel1.add(puntovacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 810, 20, -1));
+
+        felchaizq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Flecha izquierda.png"))); // NOI18N
+        felchaizq.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                felchaizqMouseClicked(evt);
+            }
+        });
+        jPanel1.add(felchaizq, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 500, -1, -1));
+
+        flechader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Flecha derecha.png"))); // NOI18N
+        flechader.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flechaderMouseClicked(evt);
+            }
+        });
+        jPanel1.add(flechader, new org.netbeans.lib.awtextra.AbsoluteConstraints(1730, 490, -1, -1));
+        jPanel1.add(labelimagenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 260, 710, 490));
+
+        fondocar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGame/Cuadrado fondo enfocado.png"))); // NOI18N
+        jPanel1.add(fondocar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 290, 770, 420));
 
         fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/launcherv1v1/FondoBase.png"))); // NOI18N
-        fondo.setToolTipText("");
-        fondo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, -1, -1));
+        jPanel1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, -1, -1));
 
-        panecarrusel.setMinimumSize(new java.awt.Dimension(660, 500));
-        panecarrusel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(946, Short.MAX_VALUE)
-                    .addComponent(panecarrusel, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(329, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(230, Short.MAX_VALUE)
-                    .addComponent(panecarrusel, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(377, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void flechaizqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaizqMouseClicked
-        ImageIndex-=1;
-        printfoto();
-        
-    }//GEN-LAST:event_flechaizqMouseClicked
+    private void felchaizqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_felchaizqMouseClicked
+        previousImage();
+        SetImageLabel(labelimagenes, Embarque[currentImageIndex]);
+        updateDots();
+    }//GEN-LAST:event_felchaizqMouseClicked
 
     private void flechaderMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flechaderMouseClicked
-        
-        ImageIndex+=1;
-        printfoto();
+        nextImage();
+        SetImageLabel(labelimagenes, Embarque[currentImageIndex]);
+        updateDots();
     }//GEN-LAST:event_flechaderMouseClicked
 
     /**
      * @param args the command line arguments
      */
-   
-    
     public static void main(String args[]) {
-    /* Set the Nimbus look and feel */
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-     */
-    try {
-        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-            if ("Nimbus".equals(info.getName())) {
-                javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                break;
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
             }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    } catch (ClassNotFoundException ex) {
-        java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (InstantiationException ex) {
-        java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (IllegalAccessException ex) {
-        java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-    } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-        java.util.logging.Logger.getLogger(game.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new game().setVisible(true);
+            }
+        });
     }
-    //</editor-fold>
 
-    /* Create and display the form */
-    java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-            new game().setVisible(true);
-        }
-    });
-}
-    
-    
-    
-    
-    
-     private void SetImageLabel(JLabel label, String path) {
-    ImageIcon icon = new ImageIcon(path);
-    label.setIcon(icon); // Establece el icono sin cambiar el tamaño.
-    this.repaint();      // Asegura que el componente se actualice en la pantalla.
-}
-
+    public void SetImageLabel(JLabel label, String path) {
+        ImageIcon icon = new ImageIcon(path);
+        label.setIcon(icon); // Establece el icono sin cambiar el tamaño.
+        label.repaint();      // Asegura que el componente se actualice en la pantalla.
+    }
 
     private void addMouseListeners(JLabel label) {
-    label.addMouseListener(new MouseAdapter() {
-        @Override
-        public void mouseEntered(MouseEvent e) {
-            // Aumentar el tamaño de la imagen 
-            Utility.zoomImage(label, 1.2); 
-        }
+        label.addMouseListener(new MouseAdapter() {
 
-        @Override
-        public void mouseExited(MouseEvent e) {
-            Utility.resetImageSize(label);
-        }
-    });
-}
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // Aumentar el tamaño de la imagen en un 20%
+                Utility.zoomImage(label, 1.2); // Asumiendo que 1.2 es un 20% más grande
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                Utility.resetImageSize(label);
+            }
+        });
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel carrusellabel;
-    private javax.swing.JLabel comenzar;
+    private javax.swing.JLabel felchaizq;
     private javax.swing.JLabel flechader;
-    private javax.swing.JLabel flechaizq;
     private javax.swing.JLabel fondo;
-    private javax.swing.JLabel fondocarru;
+    private javax.swing.JLabel fondocar;
     private javax.swing.JLabel icon0;
     private javax.swing.JLabel icon1;
     private javax.swing.JLabel icon10;
@@ -404,14 +429,19 @@ public class game extends javax.swing.JFrame {
     private javax.swing.JLabel icon7;
     private javax.swing.JLabel icon8;
     private javax.swing.JLabel icon9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel panecarrusel;
-    private javax.swing.JPanel paneliconos;
-    private javax.swing.JLabel punto1carru;
-    private javax.swing.JLabel punto2carru;
-    private javax.swing.JLabel punto3carru;
-    private javax.swing.JLabel punto4carru;
-    private javax.swing.JLabel punto5carru;
+    private javax.swing.JPanel jPanel3;
+    public static javax.swing.JLabel labelimagenes;
+    private javax.swing.JLabel puntolleno0;
+    private javax.swing.JLabel puntolleno1;
+    private javax.swing.JLabel puntolleno2;
+    private javax.swing.JLabel puntolleno3;
+    private javax.swing.JLabel puntolleno4;
+    private javax.swing.JLabel puntovacio0;
+    private javax.swing.JLabel puntovacio1;
+    private javax.swing.JLabel puntovacio2;
+    private javax.swing.JLabel puntovacio3;
+    private javax.swing.JLabel puntovacio4;
     // End of variables declaration//GEN-END:variables
+
 }

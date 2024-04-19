@@ -35,10 +35,7 @@ public class Utility {
             label.setIcon(originalIcon);
         }
     }
-    public static void openGameWindow(JFrame currentFrame){
-        game gameWindow = new game();
-        gameWindow.setVisible(true);
-    }
+   
 
     
     }
